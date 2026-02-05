@@ -3,102 +3,375 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOVEREIGN SYMPTOMS // LAVISH SYSTEMS</title>
+    <title>SOVEREIGN SYMPTOMS // GODHOOD ENCODED</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;900&family=Montserrat:wght@100;300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Montserrat:wght@200;400;600&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --obsidian: #020202; --gold: #d4af37; --platinum: #f4f4f4; }
-        body { background-color: var(--obsidian); color: var(--platinum); font-family: 'Montserrat', sans-serif; letter-spacing: 0.2em; }
-        .font-godhood { font-family: 'Cinzel Decorative', serif; }
-        .glass-panel { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(40px); border: 1px solid rgba(212, 175, 55, 0.15); }
-        .text-gold { color: var(--gold); text-shadow: 0 0 10px rgba(212, 175, 55, 0.3); }
-        .gold-border-glow:hover { border-color: var(--gold); box-shadow: 0 0 50px rgba(212, 175, 55, 0.1); transform: scale(1.02); }
-        .btn-luxury { border: 1px solid var(--gold); padding: 1.5rem 3rem; font-size: 10px; transition: 0.5s ease; cursor: pointer; }
-        .btn-luxury:hover { background: var(--gold); color: black; box-shadow: 0 0 30px var(--gold); }
-        iframe { filter: contrast(1.1) brightness(0.9); transition: 0.8s ease; }
-        iframe:hover { filter: contrast(1.2) brightness(1.1); }
+        :root { 
+            --void: #030303; 
+            --gold: #D4AF37; 
+            --blood: #8a0303;
+            --glass: rgba(20, 20, 20, 0.6);
+            --border: rgba(212, 175, 55, 0.2);
+        }
+        body { background-color: var(--void); color: #e5e5e5; font-family: 'Montserrat', sans-serif; letter-spacing: 0.05em; overflow-x: hidden; }
+        .font-god { font-family: 'Cinzel Decorative', serif; }
+        .font-tech { font-family: 'Syncopate', sans-serif; }
+        
+        /* Glassmorphism & Glows */
+        .glass-panel { 
+            background: var(--glass); 
+            backdrop-filter: blur(20px); 
+            border: 1px solid var(--border); 
+            box-shadow: 0 0 30px rgba(0,0,0,0.8);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-panel:hover { 
+            border-color: var(--gold); 
+            box-shadow: 0 0 50px rgba(212, 175, 55, 0.15); 
+            transform: translateY(-2px);
+        }
+        
+        .text-gold-glow { color: var(--gold); text-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
+        
+        /* Video Filters */
+        iframe { filter: grayscale(100%) contrast(1.2); transition: all 0.8s ease; }
+        .video-container:hover iframe { filter: grayscale(0%) contrast(1.1); }
+        
+        /* Service List Styling */
+        .service-item { border-bottom: 1px solid rgba(255,255,255,0.05); padding: 1rem 0; display: flex; justify-content: space-between; align-items: baseline; }
+        .service-item:last-child { border-bottom: none; }
+        .service-details { font-size: 0.75rem; color: #888; text-transform: uppercase; margin-top: 0.5rem; letter-spacing: 0.1em; }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: var(--void); }
+        ::-webkit-scrollbar-thumb { background: var(--gold); }
     </style>
 </head>
-<body class="p-4 md:p-24 overflow-x-hidden">
+<body class="p-0">
 
-    <header class="max-w-7xl mx-auto mb-60 text-center">
-        <h1 class="font-godhood text-5xl md:text-9xl font-black text-white uppercase tracking-tighter mb-4">SOVEREIGN SYMPTOMS</h1>
-        <p class="text-gold tracking-[1.5em] uppercase text-[12px] font-bold mb-20">The Diagnostic of Godhood</p>
-        <div class="max-w-4xl mx-auto glass-panel p-20 gold-border-glow">
-            <p class="text-xs uppercase leading-[2.5] text-white/80 italic">
-                "Luxury is not a request; it is the inevitable symptom of sovereignty. We do not build websites. We architect digital territories for the Godhood encoded."
+    <header class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <h1 class="font-god text-6xl md:text-9xl text-white mb-6 relative z-10 leading-none">
+            LET THERE <br><span class="text-gold-glow">BE ME</span>
+        </h1>
+        <p class="font-tech text-[10px] md:text-xs text-gold tracking-[0.8em] uppercase mb-12 relative z-10">
+            Sovereign Symptoms // The Inevitable Output
+        </p>
+        <div class="glass-panel p-12 max-w-3xl mx-auto relative z-10">
+            <p class="text-xs md:text-sm leading-loose uppercase text-white/80 font-light">
+                "Luxury is not a feature. It is a symptom of sovereignty. <br>
+                When the self is encoded with Godhood, <span class="text-gold font-bold">Lavish Systems</span> are the only logical result."
             </p>
-            <div class="mt-12">
-                <a href="#menu" class="btn-luxury uppercase font-bold tracking-[0.5em]">Diagnose Your System Now</a>
-            </div>
+        </div>
+        <div class="absolute bottom-10 left-0 w-full text-center animate-pulse">
+            <a href="#territories" class="text-[10px] font-tech text-white/40 uppercase tracking-[0.5em] hover:text-gold transition-colors">Initialize Protocol</a>
         </div>
     </header>
 
-    <section class="max-w-7xl mx-auto mb-60">
-        <h2 class="font-godhood text-white text-3xl uppercase mb-20 border-b border-gold pb-8">00 // Visual Synthesis</h2>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center mb-32">
-            <div class="glass-panel p-2 gold-border-glow">
-                <div class="aspect-video bg-black relative overflow-hidden">
-                    <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/lhIZqPdQOwo?autoplay=1&mute=1&loop=1&playlist=lhIZqPdQOwo" frameborder="0"></iframe>
+    <section id="territories" class="max-w-7xl mx-auto py-32 px-6 border-t border-white/5">
+        <div class="flex items-end justify-between mb-20 border-b border-gold/30 pb-6">
+            <h2 class="font-god text-4xl text-white">00 // Active Territories</h2>
+            <span class="font-tech text-[10px] text-gold tracking-widest">Network Status: 200 OK</span>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <a href="https://thetrophyhoe.com" target="_blank" class="group block">
+                <div class="glass-panel p-1 h-full relative overflow-hidden">
+                    <div class="aspect-video bg-black relative z-10 flex flex-col items-center justify-center">
+                        <h3 class="font-god text-3xl text-white group-hover:text-gold-glow transition-all">The Trophy Hoe</h3>
+                        <p class="font-tech text-[9px] text-white/50 mt-4 tracking-[0.3em]">Identity Hub // Narrative Infrastructure</p>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </div>
+            </a>
+
+            <a href="https://glitchrecords.com" target="_blank" class="group block">
+                <div class="glass-panel p-1 h-full relative overflow-hidden">
+                    <div class="aspect-video bg-black relative z-10 flex flex-col items-center justify-center">
+                        <h3 class="font-god text-3xl text-white group-hover:text-gold-glow transition-all">Glitched Records</h3>
+                        <p class="font-tech text-[9px] text-white/50 mt-4 tracking-[0.3em]">E-Commerce Architecture // Distribution</p>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto py-32 px-6 border-t border-white/5">
+        <h2 class="font-god text-4xl text-white mb-20 border-b border-gold/30 pb-6">01 // Visual Synthesis</h2>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="glass-panel p-0 overflow-hidden video-container">
+                <div class="aspect-[16/9] bg-black">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/lhIZqPdQOwo?controls=1&rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-tech text-gold text-sm mb-2">VIGILANTE</h3>
+                    <p class="text-[10px] text-white/60 uppercase">Narrative Architecture // The Show Bible</p>
                 </div>
             </div>
-            <div class="space-y-10">
-                <h3 class="font-godhood text-gold text-2xl uppercase">VIGILANTE</h3>
-                <p class="text-[11px] text-white/50 uppercase leading-relaxed">The high-compute baseline of narrative architecture. This is where identity meets the void.</p>
-                <a href="#menu" class="btn-luxury inline-block uppercase font-bold">Declare Sovereignty For This Domain</a>
-            </div>
-        </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
-            <div class="space-y-10 order-2 lg:order-1 text-right">
-                <h3 class="font-godhood text-gold text-2xl uppercase">CRUCIFLEX</h3>
-                <p class="text-[11px] text-white/50 uppercase leading-relaxed">Rhythm-synced motion assets engineered for visual dominance.</p>
-                <a href="#menu" class="btn-luxury inline-block uppercase font-bold">Architect Your Hallucination</a>
+            <div class="glass-panel p-0 overflow-hidden video-container">
+                <div class="aspect-[16/9] bg-black">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/F7PIxg_JhaY?controls=1&rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-tech text-gold text-sm mb-2">cruciFLEX</h3>
+                    <p class="text-[10px] text-white/60 uppercase">High-Compute Visuals // Rhythm Sync</p>
+                </div>
             </div>
-            <div class="glass-panel p-2 gold-border-glow order-1 lg:order-2">
-                <div class="aspect-video bg-black relative overflow-hidden">
-                    <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/F7PIxg_JhaY?autoplay=0&mute=1&loop=1" frameborder="0"></iframe>
+
+            <div class="glass-panel p-0 overflow-hidden video-container">
+                <div class="aspect-[9/16] bg-black mx-auto max-w-[200px] lg:max-w-full lg:aspect-[9/16] h-full">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mnYIsO-iQ-c?controls=0&loop=1&playlist=mnYIsO-iQ-c" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-tech text-gold text-sm mb-2">Project Jannette</h3>
+                    <p class="text-[10px] text-white/60 uppercase">Generative Assets // The Loop</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="menu" class="max-w-7xl mx-auto mb-60">
-        <h2 class="font-godhood text-white text-3xl uppercase mb-20 border-b border-gold pb-8">01 // The Master Service Menu</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <section id="menu" class="max-w-7xl mx-auto py-32 px-6 border-t border-white/5">
+        <h2 class="font-god text-4xl text-white mb-20 border-b border-gold/30 pb-6">02 // The Master Service Menu</h2>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-24">
             
-            <div class="glass-panel p-12 gold-border-glow">
-                <h3 class="font-godhood text-gold text-xs uppercase mb-8 border-b border-gold/20 pb-4">Web Architecture</h3>
-                <ul class="text-[10px] space-y-6 uppercase text-white/70">
-                    <li class="flex justify-between"><span>Vanity Terminal</span> <span class="text-gold">$2.5K</span></li>
-                    <li class="flex justify-between"><span>Command Center</span> <span class="text-gold">$8K</span></li>
-                    <li class="flex justify-between font-bold text-white pt-6 border-t border-gold/10"><span>GOD MODE</span> <span class="text-gold">$15K+</span></li>
-                </ul>
+            <div class="space-y-6">
+                <h3 class="font-tech text-gold text-lg border-b border-white/10 pb-4 mb-6">Vertical 1: Web Architecture</h3>
+                
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">Tier 1: The Vanity Terminal</span>
+                        <p class="service-details">Single-scroll EPK, Capture, Bio Links</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$1.5K - $2.5K</span>
+                </div>
+                
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">Tier 2: The Command Center</span>
+                        <p class="service-details">Full E-Commerce (3-5 Pages), Shop Integration</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$5K - $8K</span>
+                </div>
+                
+                <div class="service-item bg-white/5 p-4 border border-gold/30">
+                    <div>
+                        <span class="block font-bold text-gold text-sm tracking-widest">TIER 3: GOD MODE</span>
+                        <p class="service-details text-white">World Building, Custom JS, Hidden Easter Eggs</p>
+                    </div>
+                    <span class="font-tech text-white text-xs">$15K+</span>
+                </div>
+                
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">System Maintenance</span>
+                        <p class="service-details">Hosting, Security Protocols</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$150 - $300/mo</span>
+                </div>
             </div>
 
-            <div class="glass-panel p-12 gold-border-glow">
-                <h3 class="font-godhood text-gold text-xs uppercase mb-8 border-b border-gold/20 pb-4">Sonic Weaponry</h3>
-                <ul class="text-[10px] space-y-6 uppercase text-white/70">
-                    <li class="flex justify-between"><span>Neural Skeleton</span> <span class="text-gold">$2.5K</span></li>
-                    <li class="flex justify-between"><span>Ghost Protocol</span> <span class="text-gold">$5K+</span></li>
-                    <li class="flex justify-between"><span>Topline</span> <span class="text-gold">$800</span></li>
-                </ul>
+            <div class="space-y-6">
+                <h3 class="font-tech text-gold text-lg border-b border-white/10 pb-4 mb-6">Vertical 2: Visual Synthesis</h3>
+                
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">Product A: The Loop</span>
+                        <p class="service-details">5-10s Seamless Motion, Rhythm-Synced</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$150/clip</span>
+                </div>
+                
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">Product B: The Narrative</span>
+                        <p class="service-details">Cinematic Construction, Aesthetic Tailoring</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$350 - $500/clip</span>
+                </div>
             </div>
 
-            <div class="glass-panel p-12 gold-border-glow">
-                <h3 class="font-godhood text-gold text-xs uppercase mb-8 border-b border-gold/20 pb-4">Neural Upgrades</h3>
-                <ul class="text-[10px] space-y-6 uppercase text-white/70">
-                    <li class="flex justify-between"><span>Agent Design</span> <span class="text-gold">$1K</span></li>
-                    <li class="flex justify-between"><span>Workflow Automation</span> <span class="text-gold">$750</span></li>
-                    <li class="flex justify-between"><span>Consulting</span> <span class="text-gold">$350/hr</span></li>
-                </ul>
+            <div class="space-y-6">
+                <h3 class="font-tech text-gold text-lg border-b border-white/10 pb-4 mb-6">Vertical 3: Identity Protocols</h3>
+                
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">The Glitch Mark</span>
+                        <p class="service-details">Primary Logo + Alt Badge (Vector/PNG)</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$500 - $800</span>
+                </div>
+                
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">The Full Hallucination</span>
+                        <p class="service-details">Logo Suite + Type + Palette + 3 Motion Assets</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$1.2K - $1.8K</span>
+                </div>
+                
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">The Dossier (Static EPK)</span>
+                        <p class="service-details">8-12 Page Interactive PDF, Magazine Layout</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$600 - $900</span>
+                </div>
             </div>
 
+            <div class="space-y-6">
+                <h3 class="font-tech text-gold text-lg border-b border-white/10 pb-4 mb-6">Vertical 4: Physical Architecture</h3>
+                
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">The Artifact (Single)</span>
+                        <p class="service-details">Full Garment Design, Tech Pack</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$350/item</span>
+                </div>
+                
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">The Capsule</span>
+                        <p class="service-details">Cohesive Design (3 Distinct Garments)</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$900</span>
+                </div>
+
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">POD Setup</span>
+                        <p class="service-details">Printful/ify + Shopify Integration</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$500</span>
+                </div>
             </div>
+
+            <div class="space-y-6">
+                <h3 class="font-tech text-gold text-lg border-b border-white/10 pb-4 mb-6">Vertical 5: Neural Upgrades</h3>
+                
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">Custom Agent Design</span>
+                        <p class="service-details">AI Persona & Logic Setup</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$1,000</span>
+                </div>
+                
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">Workflow Automation</span>
+                        <p class="service-details">Per Workflow Optimization</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$750</span>
+                </div>
+
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">Creative Direction</span>
+                        <p class="service-details">Consulting Rate</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$350/hr</span>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <h3 class="font-tech text-gold text-lg border-b border-white/10 pb-4 mb-6">Vertical 6: Narrative Architecture</h3>
+                
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">The Origin Story</span>
+                        <p class="service-details">Artist Bio / Lore Base</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$350</span>
+                </div>
+                
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">The Show Bible</span>
+                        <p class="service-details">World Building & Myth-Making</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$1.5K - $2.5K</span>
+                </div>
+
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">Script Doctoring</span>
+                        <p class="service-details">Ghostwriting / Polishing</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$350/hr</span>
+                </div>
+            </div>
+
+             <div class="space-y-6">
+                <h3 class="font-tech text-gold text-lg border-b border-white/10 pb-4 mb-6">Vertical 7: Sonic Weaponry</h3>
+                
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">The Topline</span>
+                        <p class="service-details">Hook & Melody (50% Pub)</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$500 - $800</span>
+                </div>
+                
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">Full Composition</span>
+                        <p class="service-details">The Skeleton (50% Pub)</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$1.5K - $2.5K</span>
+                </div>
+
+                <div class="service-item bg-white/5 p-4 border border-gold/30">
+                    <div>
+                        <span class="block font-bold text-gold text-sm tracking-widest">GHOST PROTOCOL</span>
+                        <p class="service-details text-white">Rights Buyout (Double Base Fee)</p>
+                    </div>
+                    <span class="font-tech text-white text-xs">CUSTOM</span>
+                </div>
+            </div>
+
+             <div class="space-y-6">
+                <h3 class="font-tech text-gold text-lg border-b border-white/10 pb-4 mb-6">Service Bundles</h3>
+                
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">The Starter Pack</span>
+                        <p class="service-details">Vanity Terminal + Glitch Mark</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$2,000</span>
+                </div>
+                
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">The Rollout Pack</span>
+                        <p class="service-details">Logo + 3 Narrative Clips + Templates</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$1,500</span>
+                </div>
+
+                <div class="service-item">
+                    <div>
+                        <span class="block font-bold text-white text-sm">The Tour Pack</span>
+                        <p class="service-details">Static EPK + 2 Merch Designs</p>
+                    </div>
+                    <span class="font-tech text-gold text-xs">$1,200</span>
+                </div>
+            </div>
+
+        </div>
     </section>
 
-    <footer class="max-w-7xl mx-auto text-center pt-40 pb-20 border-t border-gold/10">
-        <p class="font-godhood text-gold text-[14px] uppercase tracking-[1em] mb-10">LAVISH SYSTEMS // LUXURY SOLUTIONS</p>
+    <footer class="max-w-7xl mx-auto py-20 text-center border-t border-gold/10 mt-20">
+        <a href="mailto:stayglitched@glitchedrecords.com" class="inline-block border border-gold px-12 py-5 font-tech text-xs text-white hover:bg-gold hover:text-black transition-all uppercase tracking-[0.4em] mb-12">
+            Initialize Connection
+        </a>
+        <p class="font-god text-[14px] text-gold uppercase tracking-[0.5em] mb-4">LAVISH SYSTEMS // LUXURY SOLUTIONS</p>
         <p class="text-[9px] uppercase tracking-[0.4em] text-white/30">Indigo Holliday // Sovereign Symptoms // Oceanside, CA</p>
     </footer>
 
