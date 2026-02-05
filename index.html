@@ -1,3 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOVEREIGN SYMPTOMS // LAVISH SYSTEMS</title>
+    <meta name="description" content="Lavish Systems, Luxury Solutions. The inevitable output of Sovereign Symptoms by Indigo Holliday.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Roboto+Mono:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --blood-red: #ff0055; --glitch-black: #050505; }
+        body { background-color: var(--glitch-black); color: #d1d1d1; font-family: 'Roboto Mono', monospace; overflow-x: hidden; }
+        .font-display { font-family: 'Orbitron', sans-serif; }
+        .border-blood { border: 1px solid var(--blood-red); }
+        .text-blood { color: var(--blood-red); }
+        .glitch-hover:hover { text-shadow: 2px 0 #fff, -2px 0 var(--blood-red); cursor: crosshair; }
+        .scanline { width: 100%; height: 2px; background: rgba(255, 0, 85, 0.1); position: fixed; top: 0; left: 0; pointer-events: none; animation: scan 4s linear infinite; z-index: 50; }
+        @keyframes scan { 0% { top: 0; } 100% { top: 100%; } }
+        .project-card { transition: all 0.4s ease; border: 1px solid rgba(255, 0, 85, 0.2); background: rgba(15, 15, 15, 0.6); }
+        .project-card:hover { border-color: var(--blood-red); background: rgba(255, 0, 85, 0.05); transform: translateY(-2px); }
+        ::-webkit-scrollbar { width: 3px; }
+        ::-webkit-scrollbar-thumb { background: var(--blood-red); }
+    </style>
+</head>
+<body class="p-4 md:p-10 lg:p-20">
+    <div class="scanline"></div>
+
+    <header class="max-w-7xl mx-auto mb-16 border-b border-blood pb-8">
+        <h1 class="text-4xl md:text-7xl font-display font-black text-white uppercase tracking-tighter glitch-hover">
+            LET THERE BE Ls
+        </h1>
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mt-4">
+            <div>
+                <p class="text-blood font-bold uppercase tracking-widest text-xs">SOVEREIGN SYMPTOMS</p>
+                <p class="text-white/60 text-[10px] uppercase mt-1">Lavish Systems // Luxury Solutions</p>
+            </div>
+            <div class="mt-4 md:mt-0 text-right">
+                <p class="text-[10px] uppercase font-bold text-white tracking-widest">INDIGO HOLLIDAY // ARCHITECT</p>
+                <p class="text-[9px] text-blood uppercase tracking-[0.3em]">THE INEVITABLE PROTOCOL // 2026</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="max-w-7xl mx-auto mb-24 px-4">
+        <h2 class="font-display text-white text-xl uppercase mb-10 tracking-widest flex items-center gap-4">
+            <span class="text-blood">00</span> Operational Territories
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="project-card p-6">
+                <h3 class="font-display text-white text-xs uppercase mb-2 tracking-widest">thetrophyhoe.com</h3>
+                <p class="text-[10px] text-white/60 uppercase mb-4">Identity Hub // Narrative Infrastructure</p>
+                <div class="aspect-video bg-zinc-900 border border-blood/20 flex items-center justify-center mb-4">
+                    <p class="text-[9px] text-blood animate-pulse uppercase tracking-widest">System Active: 200 OK</p>
+                </div>
+                <a href="https://thetrophyhoe.com" target="_blank" class="text-[9px] border border-blood px-4 py-2 hover:bg-blood transition-all uppercase">Enter Territory</a>
+            </div>
+            <div class="project-card p-6">
+                <h3 class="font-display text-white text-xs uppercase mb-2 tracking-widest">glitchrecords.com</h3>
 <p class="text-[10px] text-white/60 uppercase mb-4">E-Commerce Architecture // Distribution</p>
                 <div class="aspect-video bg-zinc-900 border border-blood/20 flex items-center justify-center mb-4">
                     <p class="text-[9px] text-blood animate-pulse uppercase tracking-widest">System Active: 200 OK</p>
@@ -57,3 +115,31 @@
             <div class="border-blood p-6 bg-zinc-900/30">
                 <h3 class="font-display text-white text-[10px] border-b border-white/10 pb-2 mb-4 uppercase">Neural Upgrades</h3>
                 <ul class="text-[11px] space-y-2 uppercase">
+<li>Custom Agents <span class="text-blood">$1K+</span></li>
+                    <li>Consulting <span class="text-blood">$350/hr</span></li>
+                </ul>
+            </div>
+            <div class="border-blood p-6 bg-zinc-900/30">
+                <h3 class="font-display text-white text-[10px] border-b border-white/10 pb-2 mb-4 uppercase">Identity Protocols</h3>
+                <ul class="text-[11px] space-y-2 uppercase">
+                    <li>Glitch Mark <span class="text-blood">$500+</span></li>
+                    <li>Full Hallucination <span class="text-blood">$1.2K+</span></li>
+                </ul>
+            </div>
+            <div class="border-blood p-6 bg-zinc-900/30 text-center flex flex-col justify-center">
+                <p class="text-[10px] text-white font-bold mb-2">NETWORK STATUS</p>
+                <p class="text-[9px] text-blood animate-pulse uppercase tracking-widest">RBHFLM // Authentication Pending</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="max-w-7xl mx-auto text-center border-t border-blood/20 pt-16 pb-10">
+        <a href="mailto:stayglitched@glitchedrecords.com" class="inline-block border-blood px-12 py-5 font-display text-xs text-white hover:bg-blood transition-all uppercase tracking-[0.4em]">Initialize Connection</a>
+        <div class="mt-12 space-y-2 text-[9px] text-white/40 uppercase tracking-widest">
+            <p>"Luxury is a symptom of sovereignty."</p>
+            <p>Sovereign Symptoms // 432 Edgehill Ln, Oceanside, CA</p>
+            <p class="text-blood font-bold tracking-[0.3em]">LAVISH SYSTEMS // LUXURY SOLUTIONS // 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
